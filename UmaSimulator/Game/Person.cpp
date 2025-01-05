@@ -41,7 +41,7 @@ void Person::setCard(int cardId)
   {
     std::vector<int> probs = { 100,100,100,100,100,100 }; //基础概率，速耐力根智鸽
     distribution = std::discrete_distribution<>(probs.begin(), probs.end());
-    throw string("不支持带凉花/理事长以外的友人或团队卡");
+    throw string("不支持带佐岳/凉花/理事长以外的友人或团队卡");
   }
   else if (cardType >= 0 && cardType <= 4)//速耐力根智卡
   {

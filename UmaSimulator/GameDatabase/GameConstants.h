@@ -26,9 +26,14 @@ public:
   static const int FriendCardYayoiRId = 10109;//R秋川
   static const int FriendCardLianghuaSSRId = 30188;//SSR凉花
   static const int FriendCardLianghuaRId = 10104;//R凉花
+
+  static const int FriendCardZuoyueSSRID = 30160; // SSR佐岳
+  static const int FriendCardZuoyueRID = 10094; // R佐岳
+
   static const double FriendUnlockOutgoingProbEveryTurnLowFriendship;//每回合解锁外出的概率，羁绊小于60
   static const double FriendUnlockOutgoingProbEveryTurnHighFriendship;//每回合解锁外出的概率，羁绊大于等于60
-  //static const double FriendEventProb;//友人事件概率//常数0.4写死在对应函数里了
+  //static const double FriendEventProb;//
+  // 事件概率//常数0.4写死在对应函数里了
   
 
   //剧本相关

@@ -34,6 +34,7 @@ enum friendTypeEnum :int16_t
   FriendType_none = 0, //无友人卡
   FriendType_lianghua = 1, //凉花
   FriendType_yayoi = 2, //理事长
+  FriendType_zuoyue=3, //佐岳
 };
 
 enum gameStageEnum :int16_t
@@ -95,7 +96,7 @@ struct Game
   std::discrete_distribution<> distribution_npc;//npc的分布
 
   //友人卡。最多带一张
-  int16_t friend_type;//0没带友人卡，1凉花，2理事长
+  int16_t friend_type;//0没带友人卡，1凉花，2理事长，3佐岳
   bool friend_isSSR;//友人卡是否为ssr
   int16_t friend_personId;//友人卡在persons里的编号
   int16_t friend_stage;//0是未点击，1是已点击但未解锁出行，2是已解锁出行

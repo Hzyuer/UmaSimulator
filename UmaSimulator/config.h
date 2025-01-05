@@ -40,6 +40,6 @@ const int LIBTORCH_USE_GPU = true;//是否使用GPU
 #if USE_BACKEND == BACKEND_CUDA
 
 //修改以下目录的同时，附加包含目录也需要修改
-#define CUDA_LIBROOT "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/lib/x64/"
+#define CUDA_LIBROOT "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/lib/x64/"
 
 #endif

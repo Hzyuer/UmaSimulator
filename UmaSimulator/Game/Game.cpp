@@ -118,8 +118,19 @@ void Game::newGame(mt19937_64& rand, bool enablePlayerPrint, int newUmaId, int u
         friend_type = FriendType_yayoi;
         friend_isSSR = false;
       }
+      else if (friendCardId == GameConstants::FriendCardZuoyueSSRID)
+      {
+          friend_type = FriendType_zuoyue;
+          friend_isSSR = true;
+      }
+      else if (friendCardId == GameConstants::FriendCardZuoyueRID)
+      {
+          friend_type = FriendType_zuoyue;
+          friend_isSSR = false;
+      }
+
       else
-        throw string("不支持带凉花/理事长以外的友人或团队卡");
+        throw string("不支持带佐岳/凉花/理事长以外的友人或团队卡");
       int friendLevel = cardId % 10;
       assert(friendLevel >= 0 && friendLevel <= 4);
       friend_vitalBonus = 1.0 + 0.01 * persons[i].cardParam.eventRecoveryAmountUp;
@@ -211,6 +222,22 @@ void Game::randomDistributeCards(std::mt19937_64& rand)
     int atTrain = 5;
     if (friend_type != FriendType_none && i == friend_personId)
     {
+        int whichTrain1 = rand() % 6;
+        if (whichTrain1 == 5)
+        {
+            int whichTrain2 = rand() % 6;
+            atTrain = whichTrain2;
+        }
+        else
+        {
+            buckets[whichTrain1].push_back(i);
+
+            //假设第二个位置和第一个不会撞车，这样与实测概率比较接近
+            int whichTrain2 = rand() % 5;
+            if (whichTrain2 >= whichTrain1)whichTrain2++;
+            atTrain = whichTrain2;
+        }
+
       //友人卡
       atTrain = persons[i].distribution(rand);
     }
@@ -894,7 +921,49 @@ void Game::handleFriendOutgoing(std::mt19937_64& rand)
         skillPt += 40;//金技能等价
       }
     }
+    else throw string("未知的出行");
   }
+
+  else if (friend_type == FriendType_zuoyue) {
+      if (friend_outgoingUsed == 0)
+      {
+          addVitalFriend(30);
+          addMotivation(1);
+          addStatusFriend(3, 5);
+          addJiBan(pid, 5, false);
+      }
+      else if (friend_outgoingUsed == 1)
+      {
+          addVitalFriend(25);
+          addMotivation(1);
+          addStatusFriend(2, 5);
+          addStatusFriend(3, 5);
+          addJiBan(pid, 5, false);
+      }
+      else if (friend_outgoingUsed == 2)
+      {
+          addVitalFriend(35);
+          addMotivation(1);
+          addStatusFriend(3, 15);
+          isPositiveThinking = true;
+          addJiBan(pid, 5, false);
+      }
+      else if (friend_outgoingUsed == 3)
+      {
+          addVitalFriend(25);
+          addStatusFriend(3, 20);
+          addJiBan(pid, 5, false);
+      }
+      else if (friend_outgoingUsed == 4)//分为大成功和成功，取个平均
+      {
+          addVitalFriend(37);
+          addStatusFriend(3, 7);
+          addMotivation(1);
+          addJiBan(pid, 5, false);
+      }
+      else assert(false && "未知的出行");
+  }
+
   else throw string("未知的出行");
 
 
@@ -930,6 +999,23 @@ void Game::handleFriendUnlock(std::mt19937_64& rand)
     addMotivation(1);
     addJiBan(friend_personId, 5, false);
   }
+  else if (friend_type == FriendType_zuoyue) {
+      if (rand() % 3 > 0)
+      {
+          printEvents("友人外出解锁！2选项成功");
+          addVitalFriend(35);
+          addMotivation(1);
+          addJiBan(friend_personId, 10, false);
+      }
+      else
+      {
+          printEvents("友人外出解锁！2选项失败，已选择1选项");
+          addVitalFriend(15);
+          addMotivation(1);
+          addStatusFriend(3, 5);
+          addJiBan(friend_personId, 5, false);
+      }
+  }
   else throw string("未知的友人解锁出行");
   friend_stage = FriendStage_afterUnlockOutgoing;
 }
@@ -953,6 +1039,13 @@ void Game::handleFriendClickEvent(std::mt19937_64& rand, int atTrain)
       if (maxVital > 120)maxVital = 120;
       addJiBan(friend_personId, 10, false);
       addMotivation(1);
+    }
+    else if (friend_type == FriendType_zuoyue)
+    {
+        addJiBan(friend_personId, 10,false);
+        addStatusFriend(3, 15);
+        addStatusFriend(5, 5);
+        addMotivation(1);
     }
     else throw string("未知的第一次点友人");
   }
@@ -1010,6 +1103,10 @@ void Game::handleFriendClickEvent(std::mt19937_64& rand, int atTrain)
       addJiBan(friend_personId, 5, false);
       addVitalFriend(7);
     }
+    else if (friend_type == FriendType_zuoyue) {
+        addJiBan(friend_personId, 5, false);
+        addStatusFriend(3, 3);
+    }
     else throw string("未知的友人点击事件");
   }
 
@@ -1037,6 +1134,12 @@ void Game::handleFriendFixedEvent()
       addJiBan(friend_personId, 5, false);
       //skillPt += 40;//三级末脚，考虑到最后会给全身全灵，而且有进化，因此这个hint是有效的
     }
+    else if (friend_type == FriendType_zuoyue) {
+        addMotivation(1);
+        addStatusFriend(3, 15);
+        addJiBan(friend_personId, 5, false);
+        skillPt += 10;//技能等效
+    }
     else throw string("未知的友人固定事件");
   }
   else if (turn == 77)
@@ -1061,16 +1164,32 @@ void Game::handleFriendFixedEvent()
     {
       if (friend_outgoingUsed >= 5)//走完出行
       {
-        addStatusFriend(0, 30);
-        addStatusFriend(4, 30);
-        addStatusFriend(5, 45);
+         addStatusFriend(2, 15);
+         addStatusFriend(3, 25);
+         addStatusFriend(5, 30);
       }
       else
       {
-        addStatusFriend(0, 25);
-        addStatusFriend(4, 25);
-        addStatusFriend(5, 35);
+        addStatusFriend(2, 15);
+        addStatusFriend(3, 18);
+        addStatusFriend(5, 20);
       }
+
+    }
+    else if (friend_type == FriendType_zuoyue)
+    {
+        if (friend_outgoingUsed >= 5)//走完出行
+        {
+            addStatusFriend(0, 30);
+            addStatusFriend(4, 30);
+            addStatusFriend(5, 45);
+        }
+        else
+        {
+            addStatusFriend(0, 25);
+            addStatusFriend(4, 25);
+            addStatusFriend(5, 35);
+        }
 
     }
     else throw string("未知的友人固定事件");

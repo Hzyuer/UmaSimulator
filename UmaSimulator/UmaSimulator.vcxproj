@@ -75,13 +75,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PublicIncludeDirectories>G:\src\UmaSimulator\UmaSimulator;G:\boost-1.86.0;$(PublicIncludeDirectories)</PublicIncludeDirectories>
-    <ExternalIncludePath>G:\boost-1.86.0;D:\boost_1_83_0;G:\libtorch\include;G:\libtorch\include\torch\csrc\api\include;$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>D:\boost_1_83_0\stage\lib;G:\libtorch\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>G:\boost-1.86.0;D:\boost_1_83_0;G:\libtorch\include;G:\libtorch\include\torch\csrc\api\include;$(ExternalIncludePath);$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>D:\VS lib\boost_1_87_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\VS lib\boost_1_87_0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PublicIncludeDirectories>G:\src\UmaSimulator\UmaSimulator;G:\boost-1.86.0;$(PublicIncludeDirectories)</PublicIncludeDirectories>
-    <ExternalIncludePath>G:\boost-1.86.0;C:\Users\zhenz\Downloads\boost_1_84_0\boost_1_84_0;G:\libtorch\include;G:\libtorch\include\torch\csrc\api\include;$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\zhenz\Downloads\boost_1_84_0\boost_1_84_0\stage\lib;G:\libtorch\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>G:\boost-1.86.0;C:\Users\zhenz\Downloads\boost_1_84_0\boost_1_84_0;G:\libtorch\include;G:\libtorch\include\torch\csrc\api\include;$(ExternalIncludePath);$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>D:\VS lib\boost_1_87_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\VS lib\boost_1_87_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\VS lib\boost_1_87_0;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\VS lib\boost_1_87_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\VS lib\boost_1_87_0;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\VS lib\boost_1_87_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,6 +101,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\VS lib\boost_1_87_0\boost</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\VS lib\boost_1_87_0\boost</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +135,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions>/Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(ProjectDir)External;C:\local\boost_1_83_0;C:\local\libtorch_debug\include;C:\local\libtorch_debug\include\torch\csrc\api\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VS lib\boost_1_87_0\boost</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +157,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions>/Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(ProjectDir)External;C:\local\boost_1_83_0;C:\local\libtorch\include;C:\local\libtorch\include\torch\csrc\api\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VS lib\boost_1_87_0\boost</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
