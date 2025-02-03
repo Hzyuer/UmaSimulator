@@ -1,0 +1,6 @@
+{
+  "radicalFactor": 3, // 激进度，默认为3，提高会导致计算变慢
+  "searchSingleMax": 4096, // 第一选项达到多少次搜索就停止蒙特卡洛
+  "threadNum": 8, // 线程数，可根据自身CPU调整，神经网络版直接设成4
+  "useWebsocket": true // 是否使用websocket与小黑板通信，否则使用文件通信
+}

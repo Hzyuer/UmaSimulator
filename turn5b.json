@@ -1,0 +1,208 @@
+{
+    "umaId": 102403,
+    "umaStar": 4,
+    "islegal": true,
+    "turn": 5,
+    "vital": 100,
+    "maxVital": 100,
+    "motivation": 5,
+    "fiveStatus": [
+        226,
+        204,
+        103,
+        245,
+        163
+    ],
+    "fiveStatusLimit": [
+        2364,
+        1041,
+        2200,
+        2232,
+        1500
+    ],
+    "skillPt": 468,
+    "skillScore": 0,
+    "trainLevelCount": [
+        1,
+        0,
+        0,
+        1,
+        2
+    ],
+    "ptScoreRate": 2.0,
+    "failureRateBias": 0,
+    "isQieZhe": false,
+    "isAiJiao": false,
+    "isPositiveThinking": false,
+    "isRefreshMind": false,
+    "zhongMaBlueCount": [
+        6,
+        9,
+        0,
+        3,
+        0
+    ],
+    "saihou": 0,
+    "isRacing": false,
+    "cardId": [
+        302071,
+        302154,
+        301874,
+        302084,
+        301414,
+        302144
+    ],
+    "persons": [
+        {
+            "personType": 1,
+            "charaId": 0,
+            "friendship": 73,
+            "isHint": false,
+            "cardRecord": 0
+        },
+        {
+            "personType": 2,
+            "charaId": 0,
+            "friendship": 89,
+            "isHint": false,
+            "cardRecord": 0
+        },
+        {
+            "personType": 2,
+            "charaId": 0,
+            "friendship": 61,
+            "isHint": false,
+            "cardRecord": 0
+        },
+        {
+            "personType": 2,
+            "charaId": 0,
+            "friendship": 41,
+            "isHint": false,
+            "cardRecord": 0
+        },
+        {
+            "personType": 2,
+            "charaId": 0,
+            "friendship": 49,
+            "isHint": false,
+            "cardRecord": 0
+        },
+        {
+            "personType": 2,
+            "charaId": 0,
+            "friendship": 39,
+            "isHint": false,
+            "cardRecord": 0
+        }
+    ],
+    "personDistribution": [
+        [
+            0,
+            1,
+            4,
+            -1,
+            -1
+        ],
+        [
+            3,
+            8,
+            -1,
+            -1,
+            -1
+        ],
+        [
+            8,
+            8,
+            -1,
+            -1,
+            -1
+        ],
+        [
+            8,
+            8,
+            -1,
+            -1,
+            -1
+        ],
+        [
+            5,
+            -1,
+            -1,
+            -1,
+            -1
+        ]
+    ],
+    "lockedTrainingId": -1,
+    "friendship_noncard_yayoi": 0,
+    "friendship_noncard_reporter": 0,
+    "cook_material": [
+        60,
+        10,
+        60,
+        35,
+        109
+    ],
+    "cook_dish_pt": 750,
+    "cook_dish": 2,
+    "cook_farm_level": [
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    "cook_farm_pt": 100,
+    "cook_dish_sure_success": false,
+    "cook_win_history": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "cook_harvest_history": [
+        4,
+        -1,
+        -1,
+        -1
+    ],
+    "cook_harvest_green_history": [
+        true,
+        false,
+        false,
+        false
+    ],
+    "cook_harvest_num": [
+        22,
+        22,
+        22,
+        22,
+        44
+    ],
+    "cook_train_material_type": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        2,
+        -1
+    ],
+    "cook_train_green": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "cook_main_race_material_type": -1,
+    "friend_type": 1,
+    "friend_personId": 0,
+    "friend_stage": 2,
+    "friend_outgoingUsed": 1
+}

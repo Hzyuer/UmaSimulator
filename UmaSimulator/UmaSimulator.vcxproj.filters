@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Game">
+      <UniqueIdentifier>{98baa510-897a-4ddc-8406-fee4100c38d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\SupportCard">
+      <UniqueIdentifier>{4f29c778-e362-4f73-9ec2-442e7dc71187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Game">
+      <UniqueIdentifier>{6572637c-5bb0-45c2-88fd-fc79f5129b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SupportCard">
+      <UniqueIdentifier>{a88f6e74-d0bc-4658-a6c8-71bb69b09e6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GameDatabase">
+      <UniqueIdentifier>{9ab44119-9c5a-4e0c-b4d8-28ae45cb5fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\GameDatabase">
+      <UniqueIdentifier>{ecee3a31-09dd-491e-a347-4eab98b75342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tests">
+      <UniqueIdentifier>{796c275c-24fa-41f7-a8a7-6cd839cbec06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tests">
+      <UniqueIdentifier>{88af81e1-cb29-4987-a630-e40b6f3ad99b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\External">
+      <UniqueIdentifier>{4eb82961-d639-4371-b6f5-f38def5c4255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\MainCommands">
+      <UniqueIdentifier>{03937f1c-ac17-4773-8048-d4ba993859ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\MainCommands">
+      <UniqueIdentifier>{56a3f240-e3f2-486d-a2e7-f0fd05e37009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\NeuralNet">
+      <UniqueIdentifier>{5e43cb73-bb32-466a-94e1-39876c5ef4c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\NeuralNet">
+      <UniqueIdentifier>{fa82e747-5a06-4c48-bf22-1da22cc8b15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Search">
+      <UniqueIdentifier>{5386e4f3-cdc7-475a-b98e-74ea94276aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Search">
+      <UniqueIdentifier>{490cc3d4-0d2b-4435-87c1-ab2aa0a1c4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\External">
+      <UniqueIdentifier>{025f384a-5332-41d0-825f-5a37d521bc25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Websocket">
+      <UniqueIdentifier>{2797fd96-0611-4d0e-930a-cb6aed3aed74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Selfplay">
+      <UniqueIdentifier>{387e0e4b-e90b-4196-b957-4473795ea8a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Selfplay">
+      <UniqueIdentifier>{50aeaeb1-f63a-469d-83a2-3ffdfbfe14a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UmaSimulator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SupportCard\CardEffect.cpp">
+      <Filter>源文件\SupportCard</Filter>
+    </ClCompile>
+    <ClCompile Include="SupportCard\SupportCard.cpp">
+      <Filter>源文件\SupportCard</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase\KnownSupportCards.cpp">
+      <Filter>源文件\GameDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase\UmaData.cpp">
+      <Filter>源文件\GameDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase\KnownUmas.cpp">
+      <Filter>源文件\GameDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase\GameConstants.cpp">
+      <Filter>源文件\GameDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\test2.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\test1.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\test3.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GamePrint.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\PlayerPlay.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\test4.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Evaluator.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\NNInput.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\Search.cpp">
+      <Filter>源文件\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Protocol.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\test_json.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\Benchmark.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\MainAi.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\TestAiScore.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Action.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Person.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\SearchParam.cpp">
+      <Filter>源文件\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="External\mathFunctions.cpp">
+      <Filter>源文件\External</Filter>
+    </ClCompile>
+    <ClCompile Include="External\utils.cpp">
+      <Filter>源文件\External</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase\GameConfig.cpp">
+      <Filter>源文件\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="websocket.cpp">
+      <Filter>源文件\Websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\TrainingSample.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Selfplay\GameGenerator.cpp">
+      <Filter>源文件\Selfplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Selfplay\SelfplayParam.cpp">
+      <Filter>源文件\Selfplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Selfplay\SelfplayThread.cpp">
+      <Filter>源文件\Selfplay</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\Selfplay.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\TestCardsSingle.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="External\cnpy\cnpy.cpp">
+      <Filter>源文件\External</Filter>
+    </ClCompile>
+    <ClCompile Include="Selfplay\RandomCardsetHelper.cpp">
+      <Filter>源文件\Selfplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\testLibtorch.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\testDemoGame.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TestScoreNoSearch.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TestScoreSearch.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCommands\ModelBenchmark.cpp">
+      <Filter>源文件\MainCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Model_cuda.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Model_libtorch.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Model_noNN.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\testCuda.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Model.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\HandwrittenLogic.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\testOnnx.cpp">
+      <Filter>源文件\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNet\Model_onnx.cpp">
+      <Filter>源文件\NeuralNet</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game\Game.h">
+      <Filter>头文件\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportCard\SupportCard.h">
+      <Filter>头文件\SupportCard</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase\GameDatabase.h">
+      <Filter>头文件\GameDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase\UmaData.h">
+      <Filter>头文件\GameDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase\GameConstants.h">
+      <Filter>头文件\GameDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\tests.h">
+      <Filter>头文件\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="External\termcolor.hpp">
+      <Filter>头文件\External</Filter>
+    </ClInclude>
+    <ClInclude Include="External\rang.hpp">
+      <Filter>头文件\External</Filter>
+    </ClInclude>
+    <ClInclude Include="MainCommands\MainCommands.h">
+      <Filter>头文件\MainCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet\Evaluator.h">
+      <Filter>头文件\NeuralNet</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet\NNInput.h">
+      <Filter>头文件\NeuralNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\Search.h">
+      <Filter>头文件\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet\Model.h">
+      <Filter>头文件\NeuralNet</Filter>
+    </ClInclude>
+    <ClInclude Include="External\utils.h">
+      <Filter>头文件\External</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase\SkillData.h">
+      <Filter>头文件\GameDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Person.h">
+      <Filter>头文件\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Action.h">
+      <Filter>头文件\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Protocol.h">
+      <Filter>头文件\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\SearchParam.h">
+      <Filter>头文件\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="External\mathFunctions.h">
+      <Filter>头文件\External</Filter>
+    </ClInclude>
+    <ClInclude Include="websocket.h">
+      <Filter>源文件\Websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet\TrainingSample.h">
+      <Filter>头文件\NeuralNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestConfig.h">
+      <Filter>头文件\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Selfplay\GameGenerator.h">
+      <Filter>头文件\Selfplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Selfplay\SelfplayParam.h">
+      <Filter>头文件\Selfplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Selfplay\SelfplayThread.h">
+      <Filter>头文件\Selfplay</Filter>
+    </ClInclude>
+    <ClInclude Include="External\cnpy\cnpy.h">
+      <Filter>头文件\External</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportCard\CardEffect.h">
+      <Filter>头文件\GameDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestConfig.h">
+      <Filter>头文件\MainCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase\GameConfig.h">
+      <Filter>头文件\MainCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet\CudaBackendKernel.h">
+      <Filter>头文件\NeuralNet</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\onnxruntime.dll" />
+  </ItemGroup>
+</Project>
